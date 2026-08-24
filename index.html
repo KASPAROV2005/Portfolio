@@ -94,7 +94,15 @@
                     <ul class="left_profile">
                         <li><span class="profile_title">Date of Birth</span><span>MARCH 24, 2005</span></li>
                         <li><span class="profile_title">Gender</span><span>Male</span></li>
-                        <li><span class="profile_title">Age</span><span>19 Years Old</span></li>
+                        <li><span class="profile_title">Age</span><span id="age"></span></li>
+
+<script>
+const birthDate = new Date("2005-08-24");
+const today = new Date();
+let age = today.getFullYear() - birthDate.getFullYear();
+if (today < new Date(today.getFullYear(), birthDate.getMonth(), birthDate.getDate())) age--;
+document.getElementById("age").textContent = age + " Years Old";
+</script>
                         <li><span class="profile_title">Maritial Status</span><span>Unmarried</span></li>
                         <li><span class="profile_title">Nationality</span><span>MOROCCAIN</span></li>
                         
